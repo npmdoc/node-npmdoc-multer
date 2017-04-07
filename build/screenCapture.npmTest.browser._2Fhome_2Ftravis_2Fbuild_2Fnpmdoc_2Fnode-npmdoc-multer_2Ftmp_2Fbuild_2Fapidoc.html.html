@@ -1,0 +1,630 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/expressjs/multer#readme">multer (v1.3.0)</a>
+</h1>
+<h4>Middleware for handling `multipart/form-data`.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multer">module multer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.counter">
+            function <span class="apidocSignatureSpan">multer.</span>counter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.diskStorage">
+            function <span class="apidocSignatureSpan">multer.</span>diskStorage
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.file_appender">
+            function <span class="apidocSignatureSpan">multer.</span>file_appender
+            <span class="apidocSignatureSpan">(strategy, req)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.memoryStorage">
+            function <span class="apidocSignatureSpan">multer.</span>memoryStorage
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">multer.</span>counter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">multer.</span>file_appender.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multer.counter">module multer.counter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.counter.counter">
+            function <span class="apidocSignatureSpan">multer.</span>counter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multer.counter.prototype">module multer.counter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.counter.prototype.decrement">
+            function <span class="apidocSignatureSpan">multer.counter.prototype.</span>decrement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.counter.prototype.increment">
+            function <span class="apidocSignatureSpan">multer.counter.prototype.</span>increment
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.counter.prototype.isZero">
+            function <span class="apidocSignatureSpan">multer.counter.prototype.</span>isZero
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.counter.prototype.onceZero">
+            function <span class="apidocSignatureSpan">multer.counter.prototype.</span>onceZero
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multer.file_appender">module multer.file_appender</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.file_appender.file_appender">
+            function <span class="apidocSignatureSpan">multer.</span>file_appender
+            <span class="apidocSignatureSpan">(strategy, req)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multer.file_appender.prototype">module multer.file_appender.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.file_appender.prototype.insertPlaceholder">
+            function <span class="apidocSignatureSpan">multer.file_appender.prototype.</span>insertPlaceholder
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.file_appender.prototype.removePlaceholder">
+            function <span class="apidocSignatureSpan">multer.file_appender.prototype.</span>removePlaceholder
+            <span class="apidocSignatureSpan">(placeholder)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multer.file_appender.prototype.replacePlaceholder">
+            function <span class="apidocSignatureSpan">multer.file_appender.prototype.</span>replacePlaceholder
+            <span class="apidocSignatureSpan">(placeholder, file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multer" id="apidoc.module.multer">module multer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multer.counter" id="apidoc.element.multer.counter">
+        function <span class="apidocSignatureSpan">multer.</span>counter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Counter() {
+  EventEmitter.call(this)
+  this.value = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.diskStorage" id="apidoc.element.multer.diskStorage">
+        function <span class="apidocSignatureSpan">multer.</span>diskStorage
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diskStorage = function (opts) {
+  return new DiskStorage(opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### `storage`
+
+#### `DiskStorage`
+
+The disk storage engine gives you full control on storing files to disk.
+
+```javascript
+var storage = multer.<span class="apidocCodeKeywordSpan">diskStorage</span>({
+  destination: function (req, file, cb) {
+    cb(null, '/tmp/my-uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now())
+  }
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.file_appender" id="apidoc.element.multer.file_appender">
+        function <span class="apidocSignatureSpan">multer.</span>file_appender
+        <span class="apidocSignatureSpan">(strategy, req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileAppender(strategy, req) {
+  this.strategy = strategy
+  this.req = req
+
+  switch (strategy) {
+    case 'NONE': break
+    case 'VALUE': break
+    case 'ARRAY': req.files = []; break
+    case 'OBJECT': req.files = Object.create(null); break
+    default: throw new Error('Unknown file strategy: ' + strategy)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.memoryStorage" id="apidoc.element.multer.memoryStorage">
+        function <span class="apidocSignatureSpan">multer.</span>memoryStorage
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">memoryStorage = function (opts) {
+  return new MemoryStorage(opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### `MemoryStorage`
+
+The memory storage engine stores the files in memory as `Buffer` objects. It
+doesn't have any options.
+
+```javascript
+var storage = multer.<span class="apidocCodeKeywordSpan">memoryStorage</span>()
+var upload = multer({ storage: storage })
+```
+
+When using memory storage, the file info will contain a field called
+`buffer` that contains the entire file.
+
+**WARNING**: Uploading very large files, or relatively small files in large
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multer.counter" id="apidoc.module.multer.counter">module multer.counter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multer.counter.counter" id="apidoc.element.multer.counter.counter">
+        function <span class="apidocSignatureSpan">multer.</span>counter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Counter() {
+  EventEmitter.call(this)
+  this.value = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multer.counter.prototype" id="apidoc.module.multer.counter.prototype">module multer.counter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multer.counter.prototype.decrement" id="apidoc.element.multer.counter.prototype.decrement">
+        function <span class="apidocSignatureSpan">multer.counter.prototype.</span>decrement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decrement() {
+  if (--this.value === 0) this.emit('zero')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Object.defineProperty(file, 'stream', {
+  configurable: true,
+  enumerable: false,
+  value: fileStream
+})
+
+fileStream.on('error', function (err) {
+  pendingWrites.<span class="apidocCodeKeywordSpan">decrement</span>()
+  abortWithError(err)
+})
+
+fileStream.on('limit', function () {
+  aborting = true
+  abortWithCode('LIMIT_FILE_SIZE', fieldname)
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.counter.prototype.increment" id="apidoc.element.multer.counter.prototype.increment">
+        function <span class="apidocSignatureSpan">multer.counter.prototype.</span>increment
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function increment() {
+  this.value++
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!includeFile) {
+  appender.removePlaceholder(placeholder)
+  return fileStream.resume()
+}
+
+var aborting = false
+pendingWrites.<span class="apidocCodeKeywordSpan">increment</span>()
+
+Object.defineProperty(file, 'stream', {
+  configurable: true,
+  enumerable: false,
+  value: fileStream
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.counter.prototype.isZero" id="apidoc.element.multer.counter.prototype.isZero">
+        function <span class="apidocSignatureSpan">multer.counter.prototype.</span>isZero
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isZero() {
+  return (this.value === 0)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Counter.prototype.isZero = function isZero () {
+  return (this.value === 0)
+}
+
+Counter.prototype.onceZero = function onceZero (fn) {
+  if (this.<span class="apidocCodeKeywordSpan">isZero</span>()) return fn()
+
+  this.once('zero', fn)
+}
+
+module.exports = Counter
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.counter.prototype.onceZero" id="apidoc.element.multer.counter.prototype.onceZero">
+        function <span class="apidocSignatureSpan">multer.counter.prototype.</span>onceZero
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onceZero(fn) {
+  if (this.isZero()) return fn()
+
+  this.once('zero', fn)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      if (readFinished &amp;&amp; pendingWrites.isZero() &amp;&amp; !errorOccured) done()
+    }
+
+    function abortWithError (uploadError) {
+      if (errorOccured) return
+      errorOccured = true
+
+      pendingWrites.<span class="apidocCodeKeywordSpan">onceZero</span>(function () {
+function remove (file, cb) {
+  storage._removeFile(req, file, cb)
+}
+
+removeUploadedFiles(uploadedFiles, remove, function (err, storageErrors) {
+  if (err) return done(err)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multer.file_appender" id="apidoc.module.multer.file_appender">module multer.file_appender</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multer.file_appender.file_appender" id="apidoc.element.multer.file_appender.file_appender">
+        function <span class="apidocSignatureSpan">multer.</span>file_appender
+        <span class="apidocSignatureSpan">(strategy, req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileAppender(strategy, req) {
+  this.strategy = strategy
+  this.req = req
+
+  switch (strategy) {
+    case 'NONE': break
+    case 'VALUE': break
+    case 'ARRAY': req.files = []; break
+    case 'OBJECT': req.files = Object.create(null); break
+    default: throw new Error('Unknown file strategy: ' + strategy)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multer.file_appender.prototype" id="apidoc.module.multer.file_appender.prototype">module multer.file_appender.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multer.file_appender.prototype.insertPlaceholder" id="apidoc.element.multer.file_appender.prototype.insertPlaceholder">
+        function <span class="apidocSignatureSpan">multer.file_appender.prototype.</span>insertPlaceholder
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">insertPlaceholder = function (file) {
+  var placeholder = {
+    fieldname: file.fieldname
+  }
+
+  switch (this.strategy) {
+    case 'NONE': break
+    case 'VALUE': break
+    case 'ARRAY': this.req.files.push(placeholder); break
+    case 'OBJECT':
+      if (this.req.files[file.fieldname]) {
+        this.req.files[file.fieldname].push(placeholder)
+      } else {
+        this.req.files[file.fieldname] = [placeholder]
+      }
+      break
+  }
+
+  return placeholder
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var file = {
+  fieldname: fieldname,
+  originalname: filename,
+  encoding: encoding,
+  mimetype: mimetype
+}
+
+var placeholder = appender.<span class="apidocCodeKeywordSpan">insertPlaceholder</span>(file)
+
+fileFilter(req, file, function (err, includeFile) {
+  if (err) {
+    appender.removePlaceholder(placeholder)
+    return abortWithError(err)
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.file_appender.prototype.removePlaceholder" id="apidoc.element.multer.file_appender.prototype.removePlaceholder">
+        function <span class="apidocSignatureSpan">multer.file_appender.prototype.</span>removePlaceholder
+        <span class="apidocSignatureSpan">(placeholder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removePlaceholder = function (placeholder) {
+  switch (this.strategy) {
+    case 'NONE': break
+    case 'VALUE': break
+    case 'ARRAY': arrayRemove(this.req.files, placeholder); break
+    case 'OBJECT':
+      if (this.req.files[placeholder.fieldname].length === 1) {
+        delete this.req.files[placeholder.fieldname]
+      } else {
+        arrayRemove(this.req.files[placeholder.fieldname], placeholder)
+      }
+      break
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+mimetype: mimetype
+      }
+
+      var placeholder = appender.insertPlaceholder(file)
+
+      fileFilter(req, file, function (err, includeFile) {
+if (err) {
+  appender.<span class="apidocCodeKeywordSpan">removePlaceholder</span>(placeholder)
+  return abortWithError(err)
+}
+
+if (!includeFile) {
+  appender.removePlaceholder(placeholder)
+  return fileStream.resume()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multer.file_appender.prototype.replacePlaceholder" id="apidoc.element.multer.file_appender.prototype.replacePlaceholder">
+        function <span class="apidocSignatureSpan">multer.file_appender.prototype.</span>replacePlaceholder
+        <span class="apidocSignatureSpan">(placeholder, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">replacePlaceholder = function (placeholder, file) {
+  if (this.strategy === 'VALUE') {
+    this.req.file = file
+    return
+  }
+
+  delete placeholder.fieldname
+  objectAssign(placeholder, file)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        appender.removePlaceholder(placeholder)
+        pendingWrites.decrement()
+        return abortWithError(err)
+      }
+
+      var fileInfo = extend(file, info)
+
+      appender.<span class="apidocCodeKeywordSpan">replacePlaceholder</span>(placeholder, fileInfo)
+      uploadedFiles.push(fileInfo)
+      pendingWrites.decrement()
+      indicateDone()
+    })
+  })
+})
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

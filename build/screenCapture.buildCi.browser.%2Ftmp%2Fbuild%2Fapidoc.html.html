@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.multer.multer">
+            function <span class="apidocSignatureSpan"></span>multer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.multer.counter">
             function <span class="apidocSignatureSpan">multer.</span>counter
             <span class="apidocSignatureSpan">()</span>
@@ -205,6 +214,29 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.multer" id="apidoc.module.multer">module multer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multer.multer" id="apidoc.element.multer.multer">
+        function <span class="apidocSignatureSpan"></span>multer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function multer(options) {
+  if (options === undefined) {
+    return new Multer({})
+  }
+
+  if (typeof options === 'object' &amp;&amp; options !== null) {
+    return new Multer(options)
+  }
+
+  throw new TypeError('Expected object for argument options')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
